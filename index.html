@@ -76,6 +76,34 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .tiers{display:flex;gap:6px;flex-wrap:wrap;}
 .tier-pill{background:#fff;border:1px solid #F5CDBE;color:#7a3420;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap;}
 .promo-box small{color:#9a6a5a;font-size:12px;flex-basis:100%;}
+.cond-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px 18px;flex-basis:100%;}
+.cl-row{display:flex;flex-direction:column;font-size:12.5px;line-height:1.35;padding:6px 10px;background:#fff;border:1px solid #F5CDBE;border-radius:10px;}
+.cl-row b{color:var(--navy-deep);}
+.cl-row span{color:#7a3420;font-weight:600;}
+.cl-row span.no{color:var(--muted);font-weight:600;}
+.cond{display:flex;gap:6px;align-items:flex-start;margin-top:8px;font-size:12.5px;color:#7a3420;background:#FFF6F2;border:1px solid #F7D3C5;border-radius:10px;padding:7px 10px;}
+.cond svg{width:16px;height:16px;flex:none;margin-top:1px;color:var(--promo);}
+.cond.none{color:var(--muted);background:#F6F8FB;border-color:var(--line);}
+.chip.bonus{display:inline-flex;align-items:center;gap:6px;color:var(--promo);border-color:#F5CDBE;}
+.chip.bonus svg{width:15px;height:15px;}
+.chip.bonus.active{background:var(--promo);border-color:var(--promo);color:#fff;}
+.g-bonus{margin-left:auto;font-style:normal;display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:800;color:var(--promo);background:#FFF3EE;border-radius:999px;padding:3px 9px;white-space:nowrap;}
+.g-bonus svg{width:13px;height:13px;}
+.tier-box b svg{width:14px;height:14px;vertical-align:-2px;}
+.tier-box small{display:block;margin-top:6px;color:#9a6a5a;font-size:11.5px;}
+.tier-box.none{background:#F6F8FB;border-color:var(--line);color:var(--muted);}
+.b-prog{margin-top:8px;display:grid;gap:5px;}
+.b-prog .bar{height:7px;background:#F7D3C5;border-radius:99px;overflow:hidden;}
+.b-prog .bar i{display:block;height:100%;background:var(--promo);border-radius:99px;}
+.b-prog span{font-size:12px;}
+.b-sum{display:block!important;background:#FFF6F2;border:1px solid #F7D3C5;border-radius:12px;padding:10px 12px;margin:8px 0;}
+.b-sum-h{display:flex;align-items:center;gap:6px;font-weight:800;color:var(--promo);font-size:13px;margin-bottom:4px;}
+.b-sum-h svg{width:15px;height:15px;}
+.b-row{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-size:12.5px;color:var(--navy-deep);}
+.b-row small{display:block;color:var(--muted);font-size:11.5px;}
+.b-row b{color:var(--fresh);white-space:nowrap;}
+.b-row b.zero{color:var(--muted);}
+.b-note{display:block;color:#9a6a5a;font-size:11.5px;margin-top:4px;}
 
 /* TOOLBAR */
 .toolbar{max-width:1120px;margin:20px auto 0;padding:0 16px;display:flex;flex-direction:column;gap:10px;}
@@ -151,7 +179,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .m-specs b{font-size:13px;color:var(--navy-deep);}
 .m-h{font-size:12px;font-weight:800;color:var(--navy-deep);text-transform:uppercase;letter-spacing:.06em;margin:4px 0 -4px;}
 .sku-list{border:1px solid var(--line);border-radius:12px;overflow:hidden;}
-.sku{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);}
+.sku{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);}
 .sku:last-child{border-bottom:none;}
 .sku-size{font-weight:800;color:var(--navy-deep);font-size:14px;white-space:nowrap;}
 .sku-size small{display:block;font-weight:600;color:var(--muted);font-size:11px;white-space:normal;}
@@ -224,9 +252,9 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
 .c-rm{background:none;border:none;color:#c33;font-size:11.5px;cursor:pointer;font-weight:700;padding:2px;}
 .cart-empty{text-align:center;color:var(--muted);padding:30px 10px;font-size:14px;}
 .totals{padding:12px 0 4px;border-top:2px solid #F0F2F6;margin-top:6px;}
-.totals div{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);padding:2px 0;}
-.totals div.grand{font-weight:800;font-size:16px;color:var(--navy-deep);padding-top:6px;}
-.totals div.disc{color:var(--promo);font-weight:700;}
+.totals>div{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);padding:2px 0;}
+.totals>div.grand{font-weight:800;font-size:16px;color:var(--navy-deep);padding-top:6px;}
+.totals>div.disc{color:var(--promo);font-weight:700;}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
 .form-grid .full{grid-column:1/-1;}
 .field label{font-size:12.5px;font-weight:800;color:var(--navy-deep);display:block;margin-bottom:4px;white-space:nowrap;}
@@ -282,12 +310,12 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
   </div>
   <div class="hero-title">
     <h1>Portfólio Canal Especializado</h1>
-    <p>Todas as marcas da pasta em um só lugar. Escolha a marca, filtre por categoria e envie o pedido da sua loja direto ao representante.</p>
+    <p>Todas as marcas da pasta em um só lugar. Monte a lista da sua loja, envie ao representante e receba o orçamento para aprovação.</p>
   </div>
   <div class="hero-badges">
     <span class="badge alt" id="bBrands">4 marcas</span>
     <span class="badge" id="bProducts">127 produtos</span>
-    <span class="badge">Desconto por quantidade</span>
+    <span class="badge">Catálogo de orçamento</span>
   </div>
 </div>
 
@@ -296,9 +324,9 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
 
 <div class="promo-strip">
   <div class="promo-box">
-    <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/></svg>Leve mais, pague menos</div>
-    <div class="tiers" id="globalTiers"></div>
-    <small>Desconto aplicado automaticamente por embalagem (mesmo produto e mesmo tamanho). Condições sujeitas à confirmação do representante.</small>
+    <div class="pt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Condições comerciais</div>
+    <div class="cond-list" id="condList"></div>
+    <small>Bonificação contada em pacotes de ração seca; cão e gato não somam entre si. Sujeita à disponibilidade — confirmar com o representante. Os valores vêm no orçamento.</small>
   </div>
 </div>
 
@@ -331,12 +359,12 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
       </div>
     </div>
     <div>
-      <h3>Como fazer o pedido</h3>
+      <h3>Como pedir um orçamento</h3>
       <ol class="how">
         <li>Escolha a marca e a categoria.</li>
         <li>Toque no <b>+</b> do produto e defina as quantidades por embalagem.</li>
-        <li>Abra o pedido e preencha os dados da loja.</li>
-        <li>Envie pelo WhatsApp — o Eduardo confirma.</li>
+        <li>Abra o orçamento, preencha os dados da loja e envie pelo WhatsApp.</li>
+        <li>O Eduardo monta o orçamento e envia para sua aprovação.</li>
       </ol>
     </div>
     <div>
@@ -346,36 +374,36 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
   </div>
 </div>
 
-<button class="cart-float" id="cartFloat" aria-label="Abrir pedido">
+<button class="cart-float" id="cartFloat" aria-label="Abrir orçamento">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.6a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-  <span class="lbl">Meu pedido</span>
+  <span class="lbl">Meu orçamento</span>
   <span class="cart-badge" id="cartBadge">0</span>
 </button>
 
 <div class="modal" id="pModal" role="dialog" aria-modal="true" aria-label="Detalhes do produto"><div class="m-panel" id="mPanel"></div></div>
 
-<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Pedido">
+<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Orçamento">
   <div class="cart-panel">
     <button class="cart-close" id="cartClose" aria-label="Fechar">&times;</button>
-    <h3>Meu pedido</h3>
-    <div class="cart-sub">Será enviado ao representante Eduardo pelo WhatsApp</div>
+    <h3>Solicitação de orçamento</h3>
+    <div class="cart-sub">Enviada ao representante Eduardo pelo WhatsApp</div>
     <div id="cartItems"></div>
     <div class="totals" id="cartTotals"></div>
     <div class="form-grid" id="custForm">
       <div class="field full" data-req><label for="fLoja">Nome da loja / Razão social <i>*</i></label><input type="text" id="fLoja" placeholder="Ex: Casa de Ração Bom Pasto" autocomplete="organization"></div>
       <div class="field"><label for="fCnpj">CNPJ</label><input type="text" id="fCnpj" inputmode="numeric" placeholder="00.000.000/0000-00"></div>
       <div class="field" data-req><label for="fCidade">Cidade / UF <i>*</i></label><input type="text" id="fCidade" placeholder="Ex: Lavras/MG"></div>
-      <div class="field" data-req><label for="fResp">Responsável <i>*</i></label><input type="text" id="fResp" placeholder="Quem recebe o pedido" autocomplete="name"></div>
-      <div class="field"><label for="fPag">Pagamento</label>
+      <div class="field" data-req><label for="fResp">Responsável <i>*</i></label><input type="text" id="fResp" placeholder="Quem aprova o orçamento" autocomplete="name"></div>
+      <div class="field"><label for="fPag">Pagamento preferido</label>
         <select id="fPag"><option>A combinar</option><option>Boleto</option><option>PIX</option><option>Cartão</option></select>
       </div>
       <div class="field full"><label for="fObs">Observações</label><textarea id="fObs" placeholder="Prazo de entrega, condições, etc."></textarea></div>
     </div>
     <div class="form-err" id="formErr"></div>
-    <div class="disclaimer">Valores e descontos são referenciais. O representante confirma estoque, preço final, frete e condições de pagamento antes do faturamento.</div>
+    <div class="disclaimer">Este catálogo não exibe preços. O representante prepara o orçamento com valores, disponibilidade, bonificações, frete e condições de pagamento, e envia para sua aprovação.</div>
     <a class="send-btn" id="sendWhats" href="https://wa.me/5535999939671" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Z"/></svg>
-      Enviar pedido ao Eduardo
+      Solicitar orçamento ao Eduardo
     </a>
   </div>
 </div>
@@ -402,22 +430,21 @@ footer .legal{margin:10px auto 0;opacity:.55;font-size:11px;max-width:640px;line
 const WHATSAPP_REP = '5535999939671';   // Eduardo — representante da pasta
 const REP_NAME = 'Eduardo';
 
-/* Faixas de desconto padrão (por embalagem: mesmo produto + mesmo tamanho). */
-const DEFAULT_TIERS = [ {min:5,pct:3}, {min:10,pct:5}, {min:20,pct:8} ];
-
-/* Faixas por MARCA (opcional) — sobrescrevem as padrão para todos os produtos da marca.
-   Ids: biofresh, guabi, gpperf, granplus
-   Ex.: BRAND_TIERS.granplus = [{min:10,pct:4},{min:30,pct:7}]; */
-const BRAND_TIERS = {};
-
-/* PREÇOS — preço unitário por produto e embalagem (sem preço = "Consultar").
-   O id de cada produto aparece na janela do (+), ex.: "Cód. p4-3".
-   Ex.: PRICES['p4-3'] = {'1 kg': 32.90, '3 kg': 89.90, '10,1 kg': 259.90, '15 kg': 359.90}; */
-const PRICES = {};
-
-/* PROMOÇÕES ESPECÍFICAS — sobrescrevem marca e padrão para um produto.
-   Ex.: PROMOS['p9-25'] = { label:'Oferta do mês', tiers:[{min:12,pct:10}] }; */
-const PROMOS = {};
+/* BONIFICAÇÃO — a cada `every` pacotes do grupo, `bonus` pacote(s) bonificado(s).
+   Cada regra é um grupo separado: cão e gato nunca somam entre si.
+   - brand: id da marca (biofresh, guabi, gpperf, granplus)
+   - lines: linhas que somam juntas no mesmo grupo (mix)
+   - sp: 'c' = cães, 'g' = gatos
+   - types: tipos que contam ('seco', 'umido', 'petisco')
+   Marcas/linhas sem regra (Biofresh, Guabi Natural, GranPlus Performance, GranPlus Snacks)
+   não têm desconto nem bonificação. */
+const BONUS_RULES = [
+  { id:'choice-c', name:'GranPlus Choice · Cães',          brand:'granplus', lines:['Choice'],          sp:'c', types:['seco'], every:12, bonus:1 },
+  { id:'choice-g', name:'GranPlus Choice · Gatos',         brand:'granplus', lines:['Choice'],          sp:'g', types:['seco'], every:12, bonus:1 },
+  { id:'gm-c',     name:'GranPlus Gourmet + Menu · Cães',  brand:'granplus', lines:['Gourmet','Menu'],  sp:'c', types:['seco'], every:12, bonus:1 },
+  { id:'gm-g',     name:'GranPlus Gourmet + Menu · Gatos', brand:'granplus', lines:['Gourmet','Menu'],  sp:'g', types:['seco'], every:12, bonus:1 }
+];
+const BONUS_NOTE = 'Bonificação sujeita à disponibilidade — confirmar com o representante.';
 
 /* =========================================================
    DADOS DO CATÁLOGO (Canal Especializado — Julho/26)
@@ -444,42 +471,59 @@ const ICONS = {
   dog:'<svg viewBox="0 0 64 64" fill="none"><path d="M20 24c-3-4-8-6-11-3-3 3 0 9 4 10M44 24c3-4 8-6 11-3 3 3 0 9-4 10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M16 30c0-9 7-16 16-16s16 7 16 16v8c0 9-7 16-16 16s-16-7-16-16v-8Z" stroke="currentColor" stroke-width="4"/><circle cx="26" cy="30" r="2.6" fill="currentColor"/><circle cx="38" cy="30" r="2.6" fill="currentColor"/><path d="M28 40c1.5 2 5 2 7 0" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>',
   cat:'<svg viewBox="0 0 64 64" fill="none"><path d="M18 16 L24 28 M46 16 L40 28" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M16 32c0-9 7-16 16-16s16 7 16 16v6c0 10-7 18-16 18s-16-8-16-18v-6Z" stroke="currentColor" stroke-width="4"/><circle cx="26" cy="32" r="2.6" fill="currentColor"/><circle cx="38" cy="32" r="2.6" fill="currentColor"/><path d="M14 36l-6-2M14 40l-6 1M50 36l6-2M50 40l6 1" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',
   can:'<svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="20" rx="20" ry="7" stroke="currentColor" stroke-width="4"/><path d="M12 20v22c0 4 9 8 20 8s20-4 20-8V20" stroke="currentColor" stroke-width="4"/><path d="M12 31c0 4 9 8 20 8s20-4 20-8" stroke="currentColor" stroke-width="3"/></svg>',
-  bone:'<svg viewBox="0 0 64 64" fill="none"><path d="M46 18a6 6 0 1 1 8 8L26 54a6 6 0 1 1-8-8L46 18Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M14 46a6 6 0 1 0 8 8M42 10a6 6 0 1 1 8 8" stroke="currentColor" stroke-width="4"/></svg>'
+  bone:'<svg viewBox="0 0 64 64" fill="none"><path d="M46 18a6 6 0 1 1 8 8L26 54a6 6 0 1 1-8-8L46 18Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M14 46a6 6 0 1 0 8 8M42 10a6 6 0 1 1 8 8" stroke="currentColor" stroke-width="4"/></svg>',
+  gift:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>'
 };
 
+function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
 const BMAP = Object.fromEntries(BRANDS.map(b=>[b.id,b]));
+const ruleOf = p => BONUS_RULES.find(r=>r.brand===p.b && r.lines.includes(p.l) && r.sp===p.sp && r.types.includes(p.t)) || null;
 P.forEach(p=>{
   p.type = (p.t==='petisco' ? 'c-petisco' : p.sp+'-'+p.t);
   p.pt = p.po ? PORTE_TAGS[p.po] : [];
   p.short = p.n.replace(/^(Cão|Gato) /,'');
+  p.rule = ruleOf(p);
   const b = BMAP[p.b];
   p.sub = p.t==='seco' ? (p.sp==='c' ? 'Cães · '+PORTE[p.po] : 'Gatos · Secos') : (p.t==='umido' ? (p.sp==='c'?'Cães':'Gatos')+' · '+(p.x[0]||'Úmido') : 'Petisco · '+(p.x[0]||''));
-  p.hay = norm([p.n,b.name,b.short||'',p.l,p.sub,p.s.join(' '),p.f.map(f=>FASE[f]).join(' '),p.x.join(' ')].join(' '));
+  p.hay = norm([p.n,b.name,b.short||'',p.l,p.sub,p.s.join(' '),p.f.map(f=>FASE[f]).join(' '),p.x.join(' '),p.rule?'bonificacao bonifica':''].join(' '));
 });
-function norm(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
-function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+const byId = Object.fromEntries(P.map(p=>[p.id,p]));
 
 /* =========================================================
    ESTADO
    ========================================================= */
-let st = { brand:'all', type:'all', line:'all', porte:'all', fase:'all', q:'' };
+let st = { brand:'all', type:'all', line:'all', porte:'all', fase:'all', bonus:false, q:'' };
 let cart = {};
 let modalSel = {}, current = null;
-try{ const s=localStorage.getItem('mbrf_cart_v1'); if(s) cart=JSON.parse(s)||{}; }catch(e){}
-function saveCart(){ try{ localStorage.setItem('mbrf_cart_v1',JSON.stringify(cart)); }catch(e){} }
-const byId = Object.fromEntries(P.map(p=>[p.id,p]));
-Object.keys(cart).forEach(k=>{ if(!byId[k.split('|')[0]]) delete cart[k]; });
+try{ const s=localStorage.getItem('mbrf_orc_v1'); if(s) cart=JSON.parse(s)||{}; }catch(e){}
+function saveCart(){ try{ localStorage.setItem('mbrf_orc_v1',JSON.stringify(cart)); }catch(e){} }
+Object.keys(cart).forEach(k=>{ const [id,s]=k.split('|'); if(!byId[id] || !byId[id].s.includes(s) || !(cart[k]>0)) delete cart[k]; });
 
 /* =========================================================
-   PREÇO / DESCONTO
+   BONIFICAÇÃO
    ========================================================= */
-const brl = v => v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-const priceOf = (id,size) => (PRICES[id] && +PRICES[id][size]) || 0;
-const tiersOf = id => (PROMOS[id] && PROMOS[id].tiers) || BRAND_TIERS[byId[id].b] || DEFAULT_TIERS;
-const pctFor = (id,q) => tiersOf(id).reduce((a,t)=>q>=t.min?Math.max(a,t.pct):a,0);
-const nextTier = (id,q) => tiersOf(id).filter(t=>t.min>q).sort((a,b)=>a.min-b.min)[0]||null;
-function minPrice(p){ const v=p.s.map(s=>priceOf(p.id,s)).filter(x=>x>0); return v.length?Math.min(...v):0; }
-const tiersHTML = t => t.map(x=>`<span class="tier-pill">${x.min}+ un. → ${x.pct}% off</span>`).join('');
+const ruleText = r => `A cada ${r.every} pacotes, ${r.bonus} bonificado${r.bonus>1?'s':''}`;
+function ruleUnits(r, override){
+  // override: {id, sel} para simular a seleção do modal antes de salvar
+  let n = 0;
+  Object.entries(cart).forEach(([k,q])=>{
+    const id = k.split('|')[0];
+    if(override && id===override.id) return;
+    if(byId[id].rule===r) n += q;
+  });
+  if(override && byId[override.id].rule===r) n += Object.values(override.sel).reduce((a,b)=>a+b,0);
+  return n;
+}
+function ruleStatus(r, units){
+  const earned = Math.floor(units/r.every)*r.bonus;
+  const missing = units % r.every === 0 && units>0 ? 0 : r.every - (units % r.every);
+  return { units, earned, missing };
+}
+function bonusSummary(){
+  return BONUS_RULES.map(r=>({ r, ...ruleStatus(r, ruleUnits(r)) })).filter(x=>x.units>0);
+}
 
 /* =========================================================
    FILTRO
@@ -491,7 +535,8 @@ function apply(list, skip){
     if(skip!=='type' && st.type!=='all' && p.type!==st.type) return false;
     if(skip!=='line' && st.line!=='all' && p.l!==st.line) return false;
     if(skip!=='porte' && st.porte!=='all' && !p.pt.includes(st.porte)) return false;
-    if(skip!=='fase' && st.fase!=='all' && !(st.fase==='promo' ? PROMOS[p.id] : p.f.includes(st.fase))) return false;
+    if(skip!=='fase' && st.fase!=='all' && !p.f.includes(st.fase)) return false;
+    if(skip!=='bonus' && st.bonus && !p.rule) return false;
     if(q.length && !q.every(w=>p.hay.includes(w))) return false;
     return true;
   });
@@ -517,10 +562,17 @@ function renderBrands(){
 }
 
 function setBrand(id, user){
-  st = { brand:id, type:'all', line:'all', porte:'all', fase:'all', q:st.q };
+  st = { brand:id, type:'all', line:'all', porte:'all', fase:'all', bonus:false, q:st.q };
   try{ history.replaceState(null,'', id==='all' ? location.pathname+location.search : '#'+id); }catch(e){}
   renderAll();
   if(user){ const t=document.querySelector('.toolbar'); if(t && t.getBoundingClientRect().top<0) t.scrollIntoView(); }
+}
+
+function brandCondition(b){
+  const rules = BONUS_RULES.filter(r=>r.brand===b.id);
+  if(!rules.length) return '<div class="cond none">Sem desconto ou bonificação nesta linha.</div>';
+  const groups = [...new Set(rules.map(r=>r.lines.join(' + ')))];
+  return `<div class="cond">${ICONS.gift}<span><b>Bonificação ${rules[0].every}+${rules[0].bonus}</b> em ${groups.map(esc).join(' e em ')} (ração seca), separado por cão e gato.</span></div>`;
 }
 
 function renderInfo(){
@@ -530,7 +582,7 @@ function renderInfo(){
   if(!b){ el.innerHTML=''; return; }
   const links = [b.site, b.ig?'@'+b.ig:''].filter(Boolean).join(' · ');
   el.innerHTML = `<div class="binfo-in"><img src="${b.logo}" alt="${esc(b.name)}">
-    <div><div class="t">${b.tier}</div><p>${esc(b.desc)}</p>${links?`<div class="links">${esc(links)}</div>`:''}</div></div>`;
+    <div><div class="t">${b.tier}</div><p>${esc(b.desc)}</p>${links?`<div class="links">${esc(links)}</div>`:''}${brandCondition(b)}</div></div>`;
 }
 
 function renderTypes(){
@@ -559,33 +611,37 @@ function renderFilters(){
   const pt = ['P','M','G'].filter(t=>pl.some(p=>p.pt.includes(t)));
   if(pl.some(p=>p.sp==='c' && p.t==='seco')) h += chipRow('Porte','porte',pt.map(t=>[t,PORTE_CHIP[t]]));
   const fl = apply(base(),'fase');
-  const fs = FASE_ORDER.filter(f=>fl.some(p=>p.f.includes(f)));
-  const opts = fs.map(f=>[f,FASE[f]]);
-  if(fl.some(p=>PROMOS[p.id])) opts.push(['promo','Promoções']);
-  h += chipRow('Fase','fase',opts);
-  const active = st.type!=='all'||st.line!=='all'||st.porte!=='all'||st.fase!=='all'||st.q;
-  if(active) h += `<div class="frow" style="margin-top:4px"><button class="clear" id="clearF">Limpar filtros</button></div>`;
+  h += chipRow('Fase','fase',FASE_ORDER.filter(f=>fl.some(p=>p.f.includes(f))).map(f=>[f,FASE[f]]));
+  const bl = apply(base(),'bonus');
+  const nb = bl.filter(p=>p.rule).length;
+  const active = st.type!=='all'||st.line!=='all'||st.porte!=='all'||st.fase!=='all'||st.bonus||st.q;
+  if(nb || active){
+    h += `<div class="frow" style="margin-top:8px">`;
+    if(nb) h += `<button class="chip bonus ${st.bonus?'active':''}" id="bonusF">${ICONS.gift} Com bonificação (${nb})</button>`;
+    if(active) h += `<button class="clear" id="clearF">Limpar filtros</button>`;
+    h += `</div>`;
+  }
   const el = document.getElementById('filters'); el.innerHTML = h;
-  el.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{ st[c.dataset.k]=c.dataset.v; renderAll(); }));
+  el.querySelectorAll('.chip[data-k]').forEach(c=>c.addEventListener('click',()=>{ st[c.dataset.k]=c.dataset.v; renderAll(); }));
+  const bf = document.getElementById('bonusF'); if(bf) bf.onclick = ()=>{ st.bonus=!st.bonus; renderAll(); };
   const c = document.getElementById('clearF');
-  if(c) c.onclick = ()=>{ st.type=st.line=st.porte=st.fase='all'; st.q=''; document.getElementById('searchInput').value=''; renderAll(); };
+  if(c) c.onclick = ()=>{ st.type=st.line=st.porte=st.fase='all'; st.bonus=false; st.q=''; document.getElementById('searchInput').value=''; renderAll(); };
 }
 
 function qtyInCart(id){ return Object.entries(cart).reduce((a,[k,v])=>k.split('|')[0]===id?a+v:a,0); }
 
 function cardHTML(p){
-  const b = BMAP[p.b], n = qtyInCart(p.id), mp = minPrice(p), promo = PROMOS[p.id];
+  const b = BMAP[p.b], n = qtyInCart(p.id);
   return `<div class="p-card ${n?'in-cart':''}" data-id="${p.id}" style="--bc:${b.color}" tabindex="0" role="button" aria-label="${esc(p.n)} — ver detalhes">
     <span class="p-tag">${FASE[p.f[0]]}</span>
     <button class="p-plus" data-id="${p.id}" tabindex="-1" aria-hidden="true">+</button>
-    ${n?`<span class="p-incart">${n} no pedido</span>`:''}
+    ${n?`<span class="p-incart">${n} no orçamento</span>`:''}
     <div class="p-img"><img src="${IMG[p.id]}" alt="" loading="lazy" decoding="async"></div>
-    ${promo?`<span class="p-promo">${esc(promo.label||'Promoção')}</span>`:''}
+    ${p.rule?`<span class="p-promo">Bonifica ${p.rule.every}+${p.rule.bonus}</span>`:''}
     <div class="p-body">
       <div class="p-line">${esc(p.sub)}</div>
       <div class="p-name">${esc(p.short)}</div>
       <div class="p-sizes">${p.s.map(s=>`<span>${s}</span>`).join('')}</div>
-      <div class="p-price ${mp?'':'tbd'}">${mp?'a partir de '+brl(mp):'Valor a consultar'}</div>
     </div></div>`;
 }
 
@@ -603,9 +659,12 @@ function renderResults(){
     if(!g){ g={key,b:BMAP[p.b],l:p.l,items:[]}; groups.push(g); }
     g.items.push(p);
   });
-  el.innerHTML = groups.map(g=>`<section class="group">
-      <div class="g-head"><img src="${g.b.logo}" alt=""><h3>${esc(g.b.short||g.b.name)}${g.l?' · '+esc(g.l):''}</h3><span>${g.items.length} ${g.items.length===1?'item':'itens'}</span></div>
-      <div class="grid">${g.items.map(cardHTML).join('')}</div></section>`).join('');
+  el.innerHTML = groups.map(g=>{
+    const hasRule = g.items.some(p=>p.rule);
+    return `<section class="group">
+      <div class="g-head"><img src="${g.b.logo}" alt=""><h3>${esc(g.b.short||g.b.name)}${g.l?' · '+esc(g.l):''}</h3><span>${g.items.length} ${g.items.length===1?'item':'itens'}</span>${hasRule?`<em class="g-bonus">${ICONS.gift} Bonificação ${g.items.find(p=>p.rule).rule.every}+1</em>`:''}</div>
+      <div class="grid">${g.items.map(cardHTML).join('')}</div></section>`;
+  }).join('');
   el.querySelectorAll('.p-card').forEach(c=>{
     c.addEventListener('click',()=>openProduct(c.dataset.id));
     c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openProduct(c.dataset.id);} });
@@ -620,7 +679,6 @@ function renderAll(){ renderBrands(); renderInfo(); renderTypes(); renderFilters
 function openProduct(id){
   const p = byId[id], b = BMAP[p.b]; current = p;
   modalSel = {}; p.s.forEach(s=>modalSel[s]=cart[p.id+'|'+s]||0);
-  const promo = PROMOS[p.id];
   const tipo = p.t==='seco'?'Seco':(p.t==='umido'?'Úmido'+(p.x[0]?' · '+p.x[0]:''):'Petisco'+(p.x[0]?' · '+p.x[0]:''));
   const tags = [p.sp==='c'?'Cães':'Gatos', tipo, p.po?PORTE[p.po]:'', ...p.f.map(f=>FASE[f])].filter(Boolean).map(t=>`<span>${esc(t)}</span>`).join('')
     + p.x.filter(x=>['Grain Free','Cereais Integrais'].includes(x)).map(x=>`<span class="g">${x}</span>`).join('')
@@ -642,10 +700,9 @@ function openProduct(id){
       </div>
       <div class="m-h">Embalagens e quantidades</div>
       <div class="sku-list" id="skuList"></div>
-      <div class="tier-box">${promo?`<b>${esc(promo.label||'Promoção')}:</b>`:'<b>Desconto por quantidade</b> (por embalagem):'}
-        <div class="tiers">${tiersHTML(tiersOf(p.id))}</div></div>
-      <div class="m-foot"><div class="m-sum" id="mSum"></div><button class="btn btn-primary" id="mAdd">Adicionar ao pedido</button></div>
-      <div class="m-note">Cód. ${p.id} · Ficha técnica completa (composição e níveis de garantia) disponível com o representante.</div>
+      <div id="mBonus"></div>
+      <div class="m-foot"><div class="m-sum" id="mSum"></div><button class="btn btn-primary" id="mAdd">Adicionar ao orçamento</button></div>
+      <div class="m-note">Cód. ${p.id} · Valores informados pelo representante no orçamento. Ficha técnica completa disponível com o representante.</div>
     </div>`;
   renderSkus();
   document.getElementById('mClose').onclick = closeProduct;
@@ -655,13 +712,26 @@ function openProduct(id){
   document.getElementById('mClose').focus();
 }
 
+function bonusBoxHTML(p){
+  if(!p.rule){
+    const lineHas = BONUS_RULES.some(r=>r.brand===p.b && r.lines.includes(p.l));
+    return `<div class="tier-box none">${lineHas ? (p.t==='umido'?'Úmidos (patês e sachês) não entram':'Este item não entra')+' na bonificação — ela vale só para ração seca da linha.' : 'Esta linha não possui desconto nem bonificação.'}</div>`;
+  }
+  const r = p.rule, s = ruleStatus(r, ruleUnits(r,{id:p.id,sel:modalSel}));
+  const mix = r.lines.length>1 ? `Soma no mix: ${r.lines.join(' + ')} de ${r.sp==='c'?'cães':'gatos'}.` : `Soma só ${r.lines[0]} de ${r.sp==='c'?'cães':'gatos'}.`;
+  let prog = '';
+  if(s.units){
+    prog = `<div class="b-prog"><div class="bar"><i style="width:${Math.min(100,((s.units%r.every)||(s.earned?r.every:0))/r.every*100)}%"></i></div>
+      <span>${s.units} pacote${s.units>1?'s':''} no grupo${s.earned?` · <b>${s.earned} bonificado${s.earned>1?'s':''}</b>`:''}${s.missing?` · faltam ${s.missing} para ${s.earned?'o próximo':'bonificar'}`:''}</span></div>`;
+  }
+  return `<div class="tier-box"><b>${ICONS.gift} ${ruleText(r)}</b> — ${esc(r.name)}.<br>${mix} Cão e gato não somam entre si.${prog}<small>${BONUS_NOTE}</small></div>`;
+}
+
 function renderSkus(){
   const p = current;
   document.getElementById('skuList').innerHTML = p.s.map(s=>{
-    const q=modalSel[s], pr=priceOf(p.id,s), pct=pctFor(p.id,q), nt=nextTier(p.id,q);
-    const price = pr ? (pct?`<div class="sku-price"><s>${brl(pr)}</s>${brl(pr*(1-pct/100))}</div>`:`<div class="sku-price">${brl(pr)}</div>`) : `<div class="sku-price tbd">Consultar</div>`;
-    const sub = q ? (pct?`${q} un. · <b style="color:var(--promo)">${pct}% off</b>`:`${q} un.`)+(nt?` · faltam ${nt.min-q} p/ ${nt.pct}%`:'') : 'unidade';
-    return `<div class="sku"><div class="sku-size">${s}<small>${sub}</small></div>${price}
+    const q=modalSel[s];
+    return `<div class="sku"><div class="sku-size">${s}<small>${q?q+' un.':'unidade'}</small></div>
       <div class="stepper"><button data-s="${s}" data-d="-1" aria-label="Diminuir ${s}">−</button>
       <input type="number" min="0" inputmode="numeric" value="${q}" data-s="${s}" aria-label="Quantidade ${s}">
       <button data-s="${s}" data-d="1" aria-label="Aumentar ${s}">+</button></div></div>`;
@@ -669,32 +739,31 @@ function renderSkus(){
   const list = document.getElementById('skuList');
   list.querySelectorAll('button[data-d]').forEach(b=>b.onclick=()=>{ modalSel[b.dataset.s]=Math.max(0,(modalSel[b.dataset.s]||0)+(+b.dataset.d)); renderSkus(); });
   list.querySelectorAll('input').forEach(i=>i.onchange=()=>{ modalSel[i.dataset.s]=Math.max(0,parseInt(i.value)||0); renderSkus(); });
-  let units=0,total=0,tbd=false;
-  p.s.forEach(s=>{ const q=modalSel[s]; if(!q) return; units+=q; const pr=priceOf(p.id,s); if(pr) total+=pr*q*(1-pctFor(p.id,q)/100); else tbd=true; });
-  document.getElementById('mSum').innerHTML = units ? `${units} unidade${units>1?'s':''}<b>${total?brl(total):''}${total&&tbd?' + ':''}${tbd?'valor a consultar':''}</b>` : 'Nenhuma unidade selecionada<b>&nbsp;</b>';
+  document.getElementById('mBonus').innerHTML = bonusBoxHTML(p);
+  const units = Object.values(modalSel).reduce((a,b)=>a+b,0);
+  document.getElementById('mSum').innerHTML = units ? `Selecionado<b>${units} unidade${units>1?'s':''}</b>` : 'Nenhuma unidade selecionada<b>&nbsp;</b>';
   const had = p.s.some(s=>cart[p.id+'|'+s]);
   const btn = document.getElementById('mAdd');
-  btn.textContent = had ? (units?'Atualizar pedido':'Remover do pedido') : 'Adicionar ao pedido';
+  btn.textContent = had ? (units?'Atualizar orçamento':'Remover do orçamento') : 'Adicionar ao orçamento';
   btn.disabled = !had && !units;
 }
 
 function applyModal(){
   const p = current;
   p.s.forEach(s=>{ const k=p.id+'|'+s; if(modalSel[s]>0) cart[k]=modalSel[s]; else delete cart[k]; });
-  saveCart(); updateBadge(true); renderResults(); closeProduct(); toast('Pedido atualizado');
+  saveCart(); updateBadge(true); renderResults(); closeProduct(); toast('Orçamento atualizado');
 }
 function closeProduct(){ document.getElementById('pModal').classList.remove('open'); document.body.style.overflow=''; }
 document.getElementById('pModal').addEventListener('click',e=>{ if(e.target.id==='pModal') closeProduct(); });
 
 /* =========================================================
-   PEDIDO
+   ORÇAMENTO
    ========================================================= */
 function cartLines(){
   return Object.entries(cart).filter(([,q])=>q>0).map(([k,q])=>{
     const [id,size]=k.split('|'); const p=byId[id]; if(!p) return null;
-    const pr=priceOf(id,size), pct=pctFor(id,q), gross=pr*q;
-    return {k,id,size,q,p,b:BMAP[p.b],pr,pct,gross,net:gross*(1-pct/100),next:nextTier(id,q)};
-  }).filter(Boolean).sort((a,b)=>BRANDS.indexOf(a.b)-BRANDS.indexOf(b.b));
+    return {k,id,size,q,p,b:BMAP[p.b]};
+  }).filter(Boolean).sort((a,b)=>BRANDS.indexOf(a.b)-BRANDS.indexOf(b.b) || (a.p.l||'').localeCompare(b.p.l||''));
 }
 function updateBadge(bump){
   document.getElementById('cartBadge').textContent = Object.values(cart).reduce((a,b)=>a+b,0);
@@ -702,29 +771,28 @@ function updateBadge(bump){
 }
 function renderCart(){
   const lines=cartLines(), wrap=document.getElementById('cartItems'), tot=document.getElementById('cartTotals');
-  if(!lines.length){ wrap.innerHTML='<div class="cart-empty">Seu pedido está vazio.<br>Toque no <b>+</b> de um produto para escolher as embalagens.</div>'; tot.innerHTML=''; return; }
+  if(!lines.length){ wrap.innerHTML='<div class="cart-empty">Seu orçamento está vazio.<br>Toque no <b>+</b> de um produto para escolher as embalagens.</div>'; tot.innerHTML=''; return; }
   let h='', last='';
   lines.forEach(l=>{
     if(l.b.id!==last){ h+=`<div class="c-brand">${esc(l.b.name)}</div>`; last=l.b.id; }
     h+=`<div class="c-item"><img src="${IMG[l.id]}" alt="">
       <div><div class="c-name">${esc(l.p.n)}${l.p.l?' <span style="color:var(--muted);font-weight:600">· '+esc(l.p.l)+'</span>':''}</div>
-      <div class="c-meta">${l.size} · ${l.pr?brl(l.pr)+' un.':'valor a consultar'}</div>
-      ${l.pct?`<span class="c-disc">${l.pct}% off</span>`:''}${l.next?`<div class="c-hint">+${l.next.min-l.q} un. para ${l.next.pct}% off</div>`:''}</div>
+      <div class="c-meta">${l.size}</div>${l.p.rule?`<span class="c-disc">Bonifica ${l.p.rule.every}+${l.p.rule.bonus}</span>`:''}</div>
       <div class="c-right"><div class="stepper"><button data-k="${l.k}" data-d="-1" aria-label="Diminuir">−</button>
       <input type="number" min="0" inputmode="numeric" value="${l.q}" data-k="${l.k}" aria-label="Quantidade">
       <button data-k="${l.k}" data-d="1" aria-label="Aumentar">+</button></div>
-      <div class="c-sub ${l.pr?'':'tbd'}">${l.pr?brl(l.net):'a consultar'}</div>
       <button class="c-rm" data-k="${l.k}">remover</button></div></div>`;
   });
   wrap.innerHTML=h;
   wrap.querySelectorAll('button[data-d]').forEach(b=>b.onclick=()=>setQty(b.dataset.k,(cart[b.dataset.k]||0)+(+b.dataset.d)));
   wrap.querySelectorAll('input').forEach(i=>i.onchange=()=>setQty(i.dataset.k,parseInt(i.value)||0));
   wrap.querySelectorAll('.c-rm').forEach(b=>b.onclick=()=>setQty(b.dataset.k,0));
-  const units=lines.reduce((a,l)=>a+l.q,0), gross=lines.reduce((a,l)=>a+l.gross,0), net=lines.reduce((a,l)=>a+l.net,0), tbd=lines.some(l=>!l.pr);
+  const units=lines.reduce((a,l)=>a+l.q,0);
+  const bs = bonusSummary();
+  const earned = bs.reduce((a,x)=>a+x.earned,0);
   tot.innerHTML=`<div><span>Itens</span><span>${lines.length} produto(s) · ${units} un.</span></div>
-    ${gross?`<div><span>Subtotal</span><span>${brl(gross)}</span></div>`:''}
-    ${gross-net>0.004?`<div class="disc"><span>Descontos por quantidade</span><span>− ${brl(gross-net)}</span></div>`:''}
-    <div class="grand"><span>Total estimado</span><span>${net?brl(net):''}${net&&tbd?' + ':''}${tbd?'itens a consultar':''}</span></div>`;
+    ${bs.length?`<div class="b-sum"><div class="b-sum-h">${ICONS.gift} Bonificações</div>${bs.map(x=>`<div class="b-row"><span>${esc(x.r.name)}<small>${x.units} pacote${x.units>1?'s':''}${x.missing?` · faltam ${x.missing} p/ ${x.earned?'o próximo':'bonificar'}`:''}</small></span><b class="${x.earned?'':'zero'}">${x.earned?'+'+x.earned+' bonificado'+(x.earned>1?'s':''):'—'}</b></div>`).join('')}<small class="b-note">${BONUS_NOTE}</small></div>`:''}
+    <div class="grand"><span>Total de unidades</span><span>${units}${earned?` + ${earned} bonif.`:''}</span></div>`;
 }
 function setQty(k,v){ v=Math.max(0,v); if(v) cart[k]=v; else delete cart[k]; saveCart(); updateBadge(); renderCart(); renderResults(); }
 
@@ -736,36 +804,47 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeProduct(); c
 
 document.getElementById('sendWhats').addEventListener('click',e=>{
   const lines=cartLines(), err=document.getElementById('formErr');
-  if(!lines.length){ e.preventDefault(); err.textContent='Adicione ao menos um produto ao pedido.'; err.style.display='block'; return; }
+  if(!lines.length){ e.preventDefault(); err.textContent='Adicione ao menos um produto ao orçamento.'; err.style.display='block'; return; }
   let ok=true;
   document.querySelectorAll('#custForm .field[data-req]').forEach(f=>{ const v=f.querySelector('input').value.trim()!==''; f.classList.toggle('err',!v); if(!v) ok=false; });
   if(!ok){ e.preventDefault(); err.textContent='Preencha os campos obrigatórios marcados com *.'; err.style.display='block'; return; }
   err.style.display='none';
   const v=id=>document.getElementById(id).value.trim();
-  let m=`Olá ${REP_NAME}! Segue pedido pelo catálogo digital Canal Especializado:\n\n*Loja:* ${v('fLoja')}\n`;
+  let m=`Olá ${REP_NAME}! Gostaria de um *orçamento* dos itens abaixo (catálogo digital Canal Especializado):\n\n*Loja:* ${v('fLoja')}\n`;
   if(v('fCnpj')) m+=`*CNPJ:* ${v('fCnpj')}\n`;
-  m+=`*Cidade:* ${v('fCidade')}\n*Responsável:* ${v('fResp')}\n*Pagamento:* ${v('fPag')}\n`;
+  m+=`*Cidade:* ${v('fCidade')}\n*Responsável:* ${v('fResp')}\n*Pagamento preferido:* ${v('fPag')}\n`;
   let last='';
   lines.forEach(l=>{
     if(l.b.id!==last){ m+=`\n*${l.b.name.toUpperCase()}*\n`; last=l.b.id; }
-    m+=`• ${l.q}x ${l.p.n}${l.p.l?' ('+l.p.l+')':''} — ${l.size}`;
-    m+= l.pr ? ` | ${brl(l.pr)} un.${l.pct?` (-${l.pct}%)`:''} = ${brl(l.net)}` : ` | valor a consultar${l.pct?` (faixa ${l.pct}% off)`:''}`;
-    m+=`\n`;
+    m+=`• ${l.q}x ${l.p.n}${l.p.l?' ('+l.p.l+')':''} — ${l.size}\n`;
   });
-  const net=lines.reduce((a,l)=>a+l.net,0), gross=lines.reduce((a,l)=>a+l.gross,0), tbd=lines.some(l=>!l.pr), units=lines.reduce((a,l)=>a+l.q,0);
+  const units=lines.reduce((a,l)=>a+l.q,0), bs=bonusSummary();
   m+=`\n*Total de unidades:* ${units}\n`;
-  if(gross-net>0.004) m+=`*Descontos:* -${brl(gross-net)}\n`;
-  m+=`*Total estimado:* ${net?brl(net):''}${net&&tbd?' + ':''}${tbd?'itens a consultar':''}\n`;
+  if(bs.length){
+    m+=`\n*Bonificação (${bs[0].r.every}+${bs[0].r.bonus}):*\n`;
+    bs.forEach(x=>{ m+=`• ${x.r.name}: ${x.units} pacotes → ${x.earned?x.earned+' bonificado'+(x.earned>1?'s':''):'não atingiu'}\n`; });
+    m+=`_${BONUS_NOTE}_\n`;
+  }
   if(v('fObs')) m+=`\n*Observações:* ${v('fObs')}\n`;
+  m+=`\nAguardo o orçamento para aprovação. Obrigado!`;
   e.currentTarget.href=`https://wa.me/${WHATSAPP_REP}?text=${encodeURIComponent(m)}`;
 });
 
 let tt; function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),1600); }
 
 let sq; document.getElementById('searchInput').addEventListener('input',e=>{ clearTimeout(sq); sq=setTimeout(()=>{ st.q=e.target.value.trim(); renderTypes(); renderFilters(); renderResults(); },120); });
-document.getElementById('globalTiers').innerHTML = tiersHTML(DEFAULT_TIERS);
 document.getElementById('bBrands').textContent = BRANDS.length+' marcas';
 document.getElementById('bProducts').textContent = P.length+' produtos';
+document.getElementById('condList').innerHTML =
+  BRANDS.map(b=>{
+    const rules = BONUS_RULES.filter(r=>r.brand===b.id);
+    if(b.id==='granplus' && rules.length){
+      const g=[...new Set(rules.map(r=>r.lines.join(' + ')))];
+      return g.map(x=>`<div class="cl-row"><b>GranPlus ${esc(x)}</b><span>${ruleText(rules[0])}${x.includes('+')?' — pode misturar as linhas':' — só a própria linha'}, cão e gato separados</span></div>`).join('')
+        + `<div class="cl-row"><b>GranPlus Snacks</b><span class="no">Sem condição</span></div>`;
+    }
+    return rules.length?'':`<div class="cl-row"><b>${esc(b.name)}</b><span class="no">Sem desconto ou bonificação</span></div>`;
+  }).join('');
 const tiers = [...new Set(BRANDS.map(b=>b.tier))];
 document.getElementById('tierList').innerHTML = tiers.map(t=>`<div><b>${t}:</b> ${BRANDS.filter(b=>b.tier===t).map(b=>esc(b.short||b.name)).join(', ')}</div>`).join('');
 
